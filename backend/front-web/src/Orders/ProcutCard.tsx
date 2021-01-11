@@ -1,4 +1,5 @@
 
+import { formatPrice } from './helpers';
 import { Product } from './types';
 
 type Props = {
@@ -7,15 +8,6 @@ type Props = {
     isSelected: boolean;
 }
 
-function formatPrice(price: number){
-    const formatter = new Intl.NumberFormat('pr-BR', {
-        style: 'currency',
-        currency: 'BRL',
-        minimumFractionDigits: 2
-    });
-
-    return formatter.format(price);
-}
 
 function ProcutCard({product, onSelectProduct, isSelected}: Props) {
     return (

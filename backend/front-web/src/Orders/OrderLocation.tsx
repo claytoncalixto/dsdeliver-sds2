@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import AsyncSelect from 'react-select/async';
 import { fetchLocalMapBox } from '../api';
 import {OrderLocationData} from './types';
@@ -40,7 +40,7 @@ function OrderLocation({onChangeLocation}:Props) {
               lat: item.center[1],
               lng: item.center[0]
             },
-            place: item.place_name,
+            //place: item.place_name,
           });
         });
       
